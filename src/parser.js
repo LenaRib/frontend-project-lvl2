@@ -11,10 +11,13 @@ const genDiff = (filepath1, filepath2) => {
   const len2 = keys2.length;
   for (let i = 0; i < len1; i += 1) {
     const value1 = obj1[keys1[i]];
-    console.log(value1);
+    // console.log(value1);
     for (let j = 0; j < len2; j += 1) {
       const value2 = obj2[keys2[j]];
-      console.log(value2);
+      if (value1 === value2) {
+        console.log(keys2[j]);
+        console.log(value2);
+      }
     }
   }
 };
